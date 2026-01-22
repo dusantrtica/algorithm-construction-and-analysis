@@ -19,4 +19,8 @@ describe('Factorization', () => {
     it('disolves number to its prime constituents', () => {
         expect(factorizeToPrimes(900)).toEqual([2,2,3,3,5,5])
     })
+
+    it('disolves large prime number efficiently', () => {
+        expect(factorizeToPrimes(1000000007)).toEqual([2,2,3,3,5,5])
+    })
 })
