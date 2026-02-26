@@ -1,7 +1,20 @@
 import { describe, expect, it } from "vitest"
 
 const getNumOfStudentsWhoPassed = (points: number[], threshold: number): number => {
+    const n = points.length;
+    let l = 0, r = n;
 
+    while (l < r) {
+        const mid = Math.floor((l + r) / 2);
+        const midElem = points[mid];
+
+        if(midElem > threshold) {
+            l = mid+1
+        } else {
+            r = mid;
+        }
+    }    
+    return r;
 }
 
 describe('getNumOfStudentsWhoPassed', () => {
