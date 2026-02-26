@@ -12,7 +12,7 @@ const getLargestNotGreaterThan = (items: number[], limit: number): number => {
         } else if (midElem < limit) {
             l = mid + 1;
         } else {
-            r = mid;
+            r = mid-1;
         }
     }
     return l === r ? l : l - 1;
@@ -32,6 +32,16 @@ const getMostValuableItems = (keyboards: number[], mouses: number[], budget: num
     }
     return maxValue;
 }
+
+describe('largestButNotGreaterThan', () => {
+    it('returns last element of the array when no larger one exist', () => {
+        expect(getLargestNotGreaterThan([1,3,5,7,9,13], 15)).toBe(5);
+    })
+
+    it('returns element that matches the boundary', () => {
+        expect(getLargestNotGreaterThan([1,3,5,7,9,13], 9)).toBe(4);
+    })
+})
 
 describe('get the most expensive equip within the budget', () => {
     it('returns pair of the most expensive stuff within the budget', () => {
