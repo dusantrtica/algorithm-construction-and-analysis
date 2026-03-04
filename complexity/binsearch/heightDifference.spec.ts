@@ -3,7 +3,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { binSearch } from "./barCodeSearch.spec";
+import { binSearch } from "./binsearch.spec";
 
 const numCmp = (a: any, b: any) => Number(a) - Number(b);
 

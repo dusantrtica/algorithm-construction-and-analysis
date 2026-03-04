@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { binSearch } from "./barCodeSearch.spec";
+import { binSearch } from "./binsearch.spec";
 
 /**
  * 
