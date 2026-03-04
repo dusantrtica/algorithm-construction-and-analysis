@@ -1,11 +1,14 @@
 import { describe, expect, it } from "vitest";
 
-export const binSearch = <T>(input: T[], elem: T, cmp: (a: T, b: T) => number): number => {
-    const n = input.length;
-    let l = 0, r = n - 1;
-
+export const binSearch = <T>(
+    input: T[],
+    elem: T,
+    cmp: (a: T, b: T) => number,
+    l: number = 0,
+    r: number = input.length-1,
+): number => {    
     while (l <= r) {
-        const mid = Math.ceil((l + r) / 2);
+        const mid = l + Math.ceil((r-l) / 2);
         const midElem = input[mid];
         if (cmp(midElem, elem) === 0) {
             return mid;
