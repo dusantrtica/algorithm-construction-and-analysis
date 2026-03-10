@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest"
 import { splittingPoint } from "./splittingPoint.spec";
 import { binSearch } from "./binsearch.spec";
 
-const closestElement = (input: number[], x: number): number => {
+export const closestElement = (input: number[], x: number): number => {
     const foundIdx = binSearch(input, x, (a, b)=> Number(a) - Number(b));
     if(foundIdx > -1) {
         return foundIdx;
