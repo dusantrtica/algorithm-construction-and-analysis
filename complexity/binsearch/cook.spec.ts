@@ -16,6 +16,10 @@ const arrayToIngredient = (input: number[]): Ingredient => {
     }
 }
 
+const numberOfPortions = (ingredients: Ingredient[]): number => {
+    return 0;
+}
+
 const maxNumberOfPortions = (cacheAmount: number, ingredients: Ingredient[]): number => {
     return 0;
 }
@@ -24,7 +28,7 @@ describe('Max number of portions', () => {
     it('returns 5', () => {
         const ingredients = [
             arrayToIngredient([10, 8, 10, 10, 13, 11]),
-            arrayToIngredient([12,20, 6, 10, 17, 24])
+            arrayToIngredient([12, 20, 6, 10, 17, 24])
         ]
         const cacheAmount = 100;
 
