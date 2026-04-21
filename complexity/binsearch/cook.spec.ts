@@ -48,7 +48,16 @@ const canMakeNumberOfPortions = (cacheAmount: number, ingredients: Ingredient[],
 }
 
 const maxNumberOfPortions = (cacheAmount: number, ingredients: Ingredient[]): number => {
-    return 0;
+    let l = 0, r = 20; // this is to be fixed, it can be lowered
+    while (l < r) {
+        const midNumOfPortions = l + Math.ceil((r - l) / 2);
+        if (!canMakeNumberOfPortions(cacheAmount, ingredients, midNumOfPortions)) {
+            r = midNumOfPortions-1;
+        } else {
+            l = midNumOfPortions;
+        }
+    }
+    return l;
 }
 
 describe('Max number of portions', () => {
