@@ -20,8 +20,7 @@ const pairlessElement = (elements: number[]): number => {
         elementsCount.set(elem, (elementsCount.get(elem) ?? 0) + 1)
     }
 
-    for(const pairs of elementsCount.entries()) {
-        console.log(pairs)
+    for(const pairs of elementsCount.entries()) {        
         if(pairs[1] === 1) {
             return pairs[0];
         }

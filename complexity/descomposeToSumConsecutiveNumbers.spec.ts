@@ -25,8 +25,7 @@ const decomposeToSumOfConsecutiveNumbers = (n: number): number => {
 const decomposeToSumOfConsecutiveNumbersByNumberOfOperands = (n: number): number => {
     let numOfCombination = 0;
     for (let m = 2; m + m * (m - 1) / 2 <= n; m++) {
-        if ((n - m * (m - 1) / 2) % m === 0) {
-            console.log('combination for ', m);
+        if ((n - m * (m - 1) / 2) % m === 0) {            
             numOfCombination++;
         }
     }

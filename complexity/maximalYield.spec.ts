@@ -37,7 +37,6 @@ const maximalYield = (area: Area, c: number) : number => {
         }
     }
 
-    console.log({a, b});
     return a*b;
 }
 
